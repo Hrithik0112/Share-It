@@ -1,7 +1,10 @@
 import Image from "next/image";
+import Header from "./_components/Header";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center font-bold text-4xl">Wake Up To Reality</div>
+    <div>
+      <Header />
+    </div>
   );
 }
