@@ -13,43 +13,25 @@ function Header() {
               <ul className="flex items-center gap-6 text-sm">
                 <li>
                   <a className="text-gray-500 transition hover:text-gray-500/75" href="/">
-                    {" "}
-                    About{" "}
+                    Home
                   </a>
                 </li>
 
                 <li>
                   <a className="text-gray-500 transition hover:text-gray-500/75" href="/">
-                    {" "}
-                    Careers{" "}
+                    Upload
                   </a>
                 </li>
 
                 <li>
                   <a className="text-gray-500 transition hover:text-gray-500/75" href="/">
-                    {" "}
-                    History{" "}
+                    About Us
                   </a>
                 </li>
 
                 <li>
                   <a className="text-gray-500 transition hover:text-gray-500/75" href="/">
-                    {" "}
-                    Services{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a className="text-gray-500 transition hover:text-gray-500/75" href="/">
-                    {" "}
-                    Projects{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a className="text-gray-500 transition hover:text-gray-500/75" href="/">
-                    {" "}
-                    Blog{" "}
+                    Contact Us
                   </a>
                 </li>
               </ul>
@@ -61,14 +43,7 @@ function Header() {
                   className="block rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-800"
                   href="/"
                 >
-                  Login
-                </a>
-
-                <a
-                  className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block"
-                  href="/"
-                >
-                  Register
+                  Get Started
                 </a>
               </div>
 
