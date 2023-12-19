@@ -1,5 +1,5 @@
 "use client";
-import { File, Shield, Upload, UploadCloud } from "lucide";
+import { File, Shield, Upload } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -39,7 +39,7 @@ function SideNav() {
             onClick={() => setActiveIndex(index)}
             key={item.id}
           >
-            {/* {<item.icon />} */}
+            <item.icon />
             <h2>{item.name}</h2>
           </button>
         ))}
