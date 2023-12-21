@@ -2,7 +2,7 @@ import AlertMsg from "@/app/(dashBoard)/_components/AlertMsg";
 import FilePreview from "@/app/(dashBoard)/_components/FilePreview";
 import React, { useState } from "react";
 
-function UploadForm() {
+function UploadForm({ uploadBtnclick }) {
   const [file, setFile] = useState();
   const [errMsg, setErrMsg] = useState();
 
@@ -62,6 +62,7 @@ function UploadForm() {
       <button
         disabled={!file}
         className="p-2 bg-primary text-white rounded-full w-[30%] mt-5 disabled:bg-gray-500"
+        onClick={() => uploadBtnclick(file)}
       >
         Upload
       </button>

@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDNXXBC7XHOJyjAHMfxGxXVsczdT7SGugM",
-  authDomain: "file-sharing-app-4a0d7.firebaseapp.com",
-  projectId: "file-sharing-app-4a0d7",
-  storageBucket: "file-sharing-app-4a0d7.appspot.com",
-  messagingSenderId: "89774552206",
-  appId: "1:89774552206:web:0066dbf1b36585d42bc5df",
+  apiKey: "AIzaSyAz6S3-we8SORdYyWkMPmPRDIET0Y4OIm0",
+  authDomain: "file-sharing-app-29bfd.firebaseapp.com",
+  projectId: "file-sharing-app-29bfd",
+  storageBucket: "file-sharing-app-29bfd.appspot.com",
+  messagingSenderId: "814949038706",
+  appId: "1:814949038706:web:6a9937aff3abc0502da0eb",
 };
 
 // Initialize Firebase
