@@ -1,14 +1,19 @@
+import AlertMsg from "@/app/(dashBoard)/_components/AlertMsg";
+import FilePreview from "@/app/(dashBoard)/_components/FilePreview";
 import React, { useState } from "react";
 
 function UploadForm() {
   const [file, setFile] = useState();
+  const [errMsg, setErrMsg] = useState();
 
   const onFileSelect = (file) => {
     console.log(file);
     if (file && file.size > 2000000) {
       console.log("Size Is Greater Than 2MB");
+      setErrMsg("Max File Uploading Size Is 2MB");
       return;
     }
+    setErrMsg(null);
     setFile(file);
   };
   return (
@@ -52,9 +57,11 @@ function UploadForm() {
           />
         </label>
       </div>
+      {errMsg ? <AlertMsg msg={errMsg} /> : null}
+      {file ? <FilePreview file={file} removefile={() => setFile(null)} /> : null}
       <button
         disabled={!file}
-        className="p-2 bg-primary text-white rounded-full w-[30%] mt-5 disabled:bg-gray-50"
+        className="p-2 bg-primary text-white rounded-full w-[30%] mt-5 disabled:bg-gray-500"
       >
         Upload
       </button>
