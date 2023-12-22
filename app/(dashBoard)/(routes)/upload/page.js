@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import UploadForm from "./_components/UploadForm";
 import { app } from "@/firebaseConfig";
 import { getDownloadURL, getStorage, ref, uploadBytesResumable } from "firebase/storage";
+import SuccessMsg from "../../_components/SuccessMsg";
 
 function Upload({ uploadBtnclick }) {
   const [progress, setProgress] = useState();
@@ -27,6 +28,7 @@ function Upload({ uploadBtnclick }) {
   };
   return (
     <div className="p-5 px-8 md:px-28">
+      {progress == 100 && <SuccessMsg />}
       <h2 className="text-[20px] m-5 text-center">
         Start <span className="text-primary">Uplaoding</span> file And{" "}
         <span className="text-primary">Share</span> It.
