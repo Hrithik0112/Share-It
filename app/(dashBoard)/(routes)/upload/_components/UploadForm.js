@@ -1,8 +1,9 @@
 import AlertMsg from "@/app/(dashBoard)/_components/AlertMsg";
 import FilePreview from "@/app/(dashBoard)/_components/FilePreview";
+import ProgressBar from "@/app/(dashBoard)/_components/ProgressBar";
 import React, { useState } from "react";
 
-function UploadForm({ uploadBtnclick }) {
+function UploadForm({ uploadBtnclick, progress }) {
   const [file, setFile] = useState();
   const [errMsg, setErrMsg] = useState();
 
@@ -59,13 +60,18 @@ function UploadForm({ uploadBtnclick }) {
       </div>
       {errMsg ? <AlertMsg msg={errMsg} /> : null}
       {file ? <FilePreview file={file} removefile={() => setFile(null)} /> : null}
-      <button
-        disabled={!file}
-        className="p-2 bg-primary text-white rounded-full w-[30%] mt-5 disabled:bg-gray-500"
-        onClick={() => uploadBtnclick(file)}
-      >
-        Upload
-      </button>
+
+      {progress > 0 ? (
+        <ProgressBar progress={progress} />
+      ) : (
+        <button
+          disabled={!file}
+          className="p-2 bg-primary text-white rounded-full w-[30%] mt-5 disabled:bg-gray-500"
+          onClick={() => uploadBtnclick(file)}
+        >
+          Upload
+        </button>
+      )}
     </div>
   );
 }
